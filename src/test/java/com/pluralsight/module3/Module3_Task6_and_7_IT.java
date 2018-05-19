@@ -67,6 +67,7 @@ public class Module3_Task6_and_7_IT extends Mockito{
 			assertNotNull(errorMsg, method);
 		}
 
+		
     @Test
     public void module3_task7() throws Exception {
 			 // try {

@@ -99,12 +99,6 @@ public class Module2_Task11_thru_14_IT {
 			}catch (ElementNotFoundException e) {
 				assertTrue("The input field with name \"bookauthor\" does not exist.", false);
 			}
-		}
-
-		@Test
-	  public void module2_task14() {
-			assertNotNull("Link Edit did not work.", nextPage);
-			assertNotNull("Form is null.", form);
 
 			// Get price input field, check value
 			try {

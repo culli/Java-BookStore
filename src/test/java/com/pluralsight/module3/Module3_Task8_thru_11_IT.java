@@ -128,7 +128,7 @@ public class Module3_Task8_thru_11_IT extends Mockito{
 
 			Method method = null;
 			try {
-				 method =  BookDAO.class.getMethod("updateBook", int.class);
+				 method =  BookDAO.class.getMethod("updateBook", Book.class);
 			} catch (NoSuchMethodException e) {
 				 //e.printStackTrace();
 			}

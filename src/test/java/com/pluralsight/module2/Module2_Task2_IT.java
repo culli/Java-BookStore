@@ -29,7 +29,7 @@ public class Module2_Task2_IT extends Mockito{
 		// Since it's private need to verify the lines of code get called
 		// through the /delete action in doGet()
     @Test
-    public void module1_task2() throws Exception {
+    public void module2_task2() throws Exception {
 			 ControllerServlet controllerServlet = PowerMockito.spy(new ControllerServlet());
        boolean called_showEditForm = false;
        HttpServletRequest request = mock(HttpServletRequest.class);

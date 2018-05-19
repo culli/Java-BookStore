@@ -24,7 +24,6 @@
 	                <th>Title</th>
 	                <th>Author</th>
 	                <th>Price</th>
-                  <th>In Stock</th>
                   <th><a href="new">Add Book</a></th>
 	            </tr>
 
@@ -33,7 +32,6 @@
 	                    <td> ${ item.getTitle() } </td>
 	                    <td> ${ item.getAuthor() } </td>
 	                    <td> <fmt:formatNumber value = "${ item.getPrice() }" type = "currency"/>  </td>
-                      <td> 10 </td>
                       <td> <a href="#edit">Edit</a>
                            <a href="#delete">Delete</a> </td>
                       <%-- <td> <a href="edit?id=<c:out value='${item.getId()}' />">Edit</a>

@@ -24,8 +24,6 @@
 	                <th>Title</th>
 	                <th>Author</th>
 	                <th>Price</th>
-                  <th>Quantity</th>
-                  <th></th>
 	            </tr>
 
 	 			<c:forEach items="${books}" var="item">
@@ -34,8 +32,6 @@
 	                    <td> ${ item.getTitle() } </td>
 	                    <td> ${ item.getAuthor() } </td>
 	                    <td> <fmt:formatNumber value = "${ item.getPrice() }" type = "currency"/>  </td>
-                      <td><input type="number" name="quantity" min="1" max="50" value="1"></td>
-                      <td><input type="submit" value="Add to Cart"></td>
 	                </form></tr>
 	            </c:forEach>
 	        </table>

@@ -34,7 +34,7 @@ public class Module1_Task1_IT {
 
 		// Verify the edit and delete hrefs, in BookAdmin.jsp contain the id
     @Test
-	  public void module1_task1() {
+	  public void _task1() {
       url_contains_id("Delete");
       url_contains_id("Edit");
     }

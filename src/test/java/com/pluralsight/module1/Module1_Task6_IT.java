@@ -24,7 +24,7 @@ public class Module1_Task6_IT {
 
     // Verify the deleteBook() method exists in BookDAO
     @Test
-    public void module1_task6() throws Exception {
+    public void _task6() throws Exception {
       Method method = null;
       String sql = "DELETE FROM book WHERE id = ?";
       Connection spyConnection = Mockito.mock(Connection.class);

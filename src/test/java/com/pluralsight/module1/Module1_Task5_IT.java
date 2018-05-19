@@ -24,7 +24,7 @@ public class Module1_Task5_IT {
 
     // Verify the deleteBook() in BookDAO calls prepareStatement()
     @Test
-    public void module1_task5() throws Exception {
+    public void _task5() throws Exception {
       Method method = null;
       String sql = "DELETE FROM book WHERE id = ?";
       Connection mockConnection = Mockito.mock(Connection.class);

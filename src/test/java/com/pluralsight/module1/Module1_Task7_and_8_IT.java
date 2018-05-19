@@ -56,17 +56,18 @@ public class Module1_Task7_and_8_IT extends Mockito{
 								"deleteBook", HttpServletRequest.class, HttpServletResponse.class);
 		} catch (Exception e) {}
 
-		String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
-		assertNotNull(errorMsg, deleteMethod);
-
-		try {
-			controllerServlet.doGet(request, response);
-		} catch (Exception e) {}
+		// String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
+		// assertNotNull(errorMsg, deleteMethod);
+		if (deleteMethod != null) {
+			try {
+				controllerServlet.doGet(request, response);
+			} catch (Exception e) {}
+		}
   }
 
 		// Verify deleteBook() in ControllerServlet is complete
     @Test
-    public void module1_task7() throws Exception {
+    public void _task7() throws Exception {
 			String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
 		  assertNotNull(errorMsg, deleteMethod);
 
@@ -91,7 +92,7 @@ public class Module1_Task7_and_8_IT extends Mockito{
     }
 
 		@Test
-		public void module1_task8() throws Exception {
+		public void _task8() throws Exception {
 			String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
 		  assertNotNull(errorMsg, deleteMethod);
 			try {

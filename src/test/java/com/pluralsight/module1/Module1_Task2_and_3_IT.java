@@ -40,13 +40,13 @@ public class Module1_Task2_and_3_IT {
 
 		// Verify the deleteBook() method exists in ControllerServlet
     @Test
-    public void module1_task2() throws Exception {
+    public void _task2() throws Exception {
       String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
       assertNotNull(errorMsg, method);
     }
 
 		@Test
-    public void module1_task3() throws Exception {
+    public void _task3() throws Exception {
 			 String tempID = "0";
 			 String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
 			 assertNotNull(errorMsg, method);

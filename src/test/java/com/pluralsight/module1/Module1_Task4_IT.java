@@ -10,7 +10,7 @@ public class Module1_Task4_IT {
 
     // Verify the deleteBook() method exists in BookDAO
     @Test
-    public void module1_task4() throws Exception {
+    public void _task4() throws Exception {
       Method method = null;
 
       try {

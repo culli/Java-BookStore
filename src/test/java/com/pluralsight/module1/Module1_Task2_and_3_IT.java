@@ -18,11 +18,6 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import org.powermock.reflect.exceptions.*;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collection;
-import org.mockito.MockingDetails;
-import org.mockito.invocation.Invocation;
 import org.powermock.reflect.Whitebox;
 import java.lang.reflect.Method;
 
@@ -30,32 +25,41 @@ import java.io.*;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ControllerServlet.class)
-public class Module1_Task3_IT extends Mockito{
-    static String tempID = "0";
+public class Module1_Task2_and_3_IT {
+
+	private ControllerServlet controllerServlet;
+	private Method method = null;
+
+  @Before
+  public void setUp() throws Exception {
+		try {
+			method = Whitebox.getMethod(ControllerServlet.class,
+								"deleteBook", HttpServletRequest.class, HttpServletResponse.class);
+		} catch (Exception e) {}
+  }
 
 		// Verify the deleteBook() method exists in ControllerServlet
-		// Since it's private need to verify the lines of code get called
-		// through the /delete action in doGet()
     @Test
+    public void module1_task2() throws Exception {
+      String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
+      assertNotNull(errorMsg, method);
+    }
+
+		@Test
     public void module1_task3() throws Exception {
+			 String tempID = "0";
+			 String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
+			 assertNotNull(errorMsg, method);
+
 			 ControllerServlet controllerServlet = PowerMockito.spy(new ControllerServlet());
        boolean called_deleteBook = false;
-       HttpServletRequest request = mock(HttpServletRequest.class);
-       HttpServletResponse response = mock(HttpServletResponse.class);
-
-       Method method = null;
-       try {
-         method = Whitebox.getMethod(ControllerServlet.class,
-                   "deleteBook", HttpServletRequest.class, HttpServletResponse.class);
-       } catch (Exception e) {}
-
-       String errorMsg = "private void deleteBook() does not exist in ControllerServlet";
-       assertNotNull(errorMsg, method);
+       HttpServletRequest request = Mockito.mock(HttpServletRequest.class);
+       HttpServletResponse response = Mockito.mock(HttpServletResponse.class);
 
        try {
-         when(request.getPathInfo()).thenReturn("/delete");
+         Mockito.when(request.getPathInfo()).thenReturn("/delete");
          //PowerMockito.doNothing().when(controllerServlet, "deleteBook", request, response);
-         when(request.getParameter("id")).thenReturn(tempID);
+         Mockito.when(request.getParameter("id")).thenReturn(tempID);
        } catch (MethodNotFoundException e) {}
 
        try {

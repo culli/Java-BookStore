@@ -40,13 +40,13 @@ public class Module2_Task1_and_2_IT extends Mockito {
 
 		// Verify the showEditForm() method exists in ControllerServlet
     @Test
-    public void module2_task1() throws Exception {
+    public void _task1() throws Exception {
       String errorMsg = "private void showEditForm() does not exist in ControllerServlet";
       assertNotNull(errorMsg, method);
     }
 
 		@Test
-		public void module2_task2() throws Exception {
+		public void _task2() throws Exception {
 			 String errorMsg = "private void showEditForm() does not exist in ControllerServlet";
 			 assertNotNull(errorMsg, method);
 

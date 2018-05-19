@@ -59,7 +59,7 @@ public class Module2_Task3_thru_6_IT extends Mockito{
 		// Since it's private need to verify the lines of code get called
 		// through the /edit action in doGet()
 		@Test
-    public void module2_task3() throws Exception {
+    public void _task3() throws Exception {
        boolean called_getParameter = false;
        boolean called_getBook = false;
 
@@ -82,7 +82,7 @@ public class Module2_Task3_thru_6_IT extends Mockito{
     }
 
     @Test
-    public void module2_task4() throws Exception {
+    public void _task4() throws Exception {
        boolean called_getRequestDispatcher = false;
 
        try {
@@ -96,7 +96,7 @@ public class Module2_Task3_thru_6_IT extends Mockito{
     }
 
 		@Test
-    public void module2_task5() throws Exception {
+    public void _task5() throws Exception {
        boolean called_setAttribute = false;
 
        try {
@@ -110,7 +110,7 @@ public class Module2_Task3_thru_6_IT extends Mockito{
     }
 
 		@Test
-    public void module2_task6() throws Exception {
+    public void _task6() throws Exception {
        boolean called_forward = false;
 
        try {

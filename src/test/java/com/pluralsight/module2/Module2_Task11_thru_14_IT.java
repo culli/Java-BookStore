@@ -48,7 +48,7 @@ public class Module2_Task11_thru_14_IT {
 		// and adding new book
 		// In this test check the form input fields have values filled in
     @Test
-	  public void module2_task11() {
+	  public void _task11() {
 			assertNotNull("Link Edit did not work.", nextPage);
 			assertNotNull("Form is null.", form);
 			//Get id input field
@@ -71,7 +71,7 @@ public class Module2_Task11_thru_14_IT {
     }
 
 		@Test
-	  public void module2_task12() {
+	  public void _task12() {
 			assertNotNull("Link Edit did not work.", nextPage);
 			assertNotNull("Form is null.", form);
 			// Get title input field, check value
@@ -86,7 +86,7 @@ public class Module2_Task11_thru_14_IT {
 		}
 
 		@Test
-	  public void module2_task13() {
+	  public void _task13() {
 			assertNotNull("Link Edit did not work.", nextPage);
 			assertNotNull("Form is null.", form);
 

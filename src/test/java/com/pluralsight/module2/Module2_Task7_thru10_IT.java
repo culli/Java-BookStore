@@ -56,13 +56,13 @@ public class Module2_Task7_thru10_IT {
 		// and adding new book
 		// In this test check the form action is conditional, and the form h2
     @Test
-	  public void module2_task7() {
+	  public void _task7() {
       assertNotNull("Link, edit, did not work.", editPage);
 			checkForm("Edit");
     }
 
 		@Test
-	  public void module2_task8() {
+	  public void _task8() {
 			assertNotNull("Link, edit, did not work.", editPage);
 			checkForm("Edit");
       assertNotNull("Link, new, did not work.", newPage);
@@ -70,12 +70,12 @@ public class Module2_Task7_thru10_IT {
     }
 
 		@Test
-	  public void module2_task9() {
+	  public void _task9() {
 			h2_correct("Edit");
     }
 
 		@Test
-	  public void module2_task10() {
+	  public void _task10() {
 			h2_correct("Edit");
 			h2_correct("New");
     }

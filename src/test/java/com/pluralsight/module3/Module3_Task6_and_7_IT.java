@@ -56,7 +56,7 @@ public class Module3_Task6_and_7_IT extends Mockito{
 
 		// Verify updateBook() exists in ControllerServlet
 		@Test
-		public void module3_task6() throws Exception {
+		public void _task6() throws Exception {
 			Method method = null;
 			try {
 				method = Whitebox.getMethod(ControllerServlet.class,
@@ -67,9 +67,9 @@ public class Module3_Task6_and_7_IT extends Mockito{
 			assertNotNull(errorMsg, method);
 		}
 
-		
+
     @Test
-    public void module3_task7() throws Exception {
+    public void _task7() throws Exception {
 			 // try {
 				// 	PowerMockito.verifyPrivate(controllerServlet)
 				// 							.invoke("updateBook", request, response);

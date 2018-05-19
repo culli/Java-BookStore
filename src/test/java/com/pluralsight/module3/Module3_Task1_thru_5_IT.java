@@ -57,13 +57,13 @@ public class Module3_Task1_thru_5_IT {
 
     // Verify updateBook() method exists in BookDAO
     @Test
-    public void module3_Task1() throws Exception {
+    public void _task1() throws Exception {
       message = "The method updateBook() doesn't exist in BookDAO.java.";
       assertNotNull(message, method);
     }
 
     @Test
-    public void module3_Task2() throws Exception {
+    public void _task2() throws Exception {
       try {
         Mockito.verify(spyConnection).prepareStatement(sql);
         called_prepareStatement = true;
@@ -74,7 +74,7 @@ public class Module3_Task1_thru_5_IT {
     }
 
     @Test
-    public void module3_Task3() throws Exception {
+    public void _task3() throws Exception {
       try {
         Mockito.verify(mockStatement).setString(1, "1984");
         called_setTitle = true;
@@ -90,7 +90,7 @@ public class Module3_Task1_thru_5_IT {
     }
 
     @Test
-    public void module3_Task4() throws Exception {
+    public void _task4() throws Exception {
       try {
         Mockito.verify(mockStatement).setFloat(3, 1.50f);
         called_setPrice = true;
@@ -106,7 +106,7 @@ public class Module3_Task1_thru_5_IT {
     }
 
     @Test
-    public void module3_Task5() throws Exception {
+    public void _task5() throws Exception {
       try {
         Mockito.verify(mockStatement).executeUpdate();
         called_executeUpdate = true;

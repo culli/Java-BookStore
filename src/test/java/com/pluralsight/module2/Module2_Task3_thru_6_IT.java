@@ -1,4 +1,5 @@
-package com.pluralsight;
+package com.pluralsight.module2;
+import com.pluralsight.*;
 
 import static org.junit.Assert.*;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,8 @@ import org.mockito.MockitoAnnotations;
 
 import java.lang.reflect.Method;
 import java.io.*;
+
+
 
 public class Module2_Task3_thru_6_IT extends Mockito{
 

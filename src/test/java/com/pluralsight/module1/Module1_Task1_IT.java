@@ -1,4 +1,5 @@
-package com.pluralsight;
+package com.pluralsight.module1;
+import com.pluralsight.*;
 
 import org.junit.After;
 import org.junit.Before;

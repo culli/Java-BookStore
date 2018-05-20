@@ -1,4 +1,5 @@
-package com.pluralsight;
+package com.pluralsight.module3;
+import com.pluralsight.*;
 
 import static org.junit.Assert.*;
 import javax.servlet.http.HttpServletRequest;

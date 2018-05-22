@@ -91,7 +91,7 @@ public class Module3_Task8_thru_11_IT extends Mockito{
 			try {
          verify(request).getParameter("id");
          called_getId = true;
-       } catch (Exception e) {}
+       } catch (Throwable e) {}
 
        errorMsg = "After action \"" + "/update" +
                          "\", did not call getParameter(\"id\").";
@@ -110,7 +110,7 @@ public class Module3_Task8_thru_11_IT extends Mockito{
          called_getAuthor = true;
 				 verify(request).getParameter("bookprice");
          called_getPrice = true;
-       } catch (Exception e) {}
+       } catch (Throwable e) {}
 
        errorMsg = "After action \"" + "/update" +
                          "\", did not call getParameter(\"booktitle\").";
@@ -159,7 +159,7 @@ public class Module3_Task8_thru_11_IT extends Mockito{
 			try {
          verify(response).sendRedirect("list");
          called_sendRedirect = true;
-       } catch (Exception e) {}
+       } catch (Throwable e) {}
 
        errorMsg = "In ControllerServlet updateBook()," +
                          " did not call sendRedirect(\"list\").";

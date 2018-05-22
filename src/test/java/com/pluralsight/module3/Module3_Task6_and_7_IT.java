@@ -36,47 +36,51 @@ public class Module3_Task6_and_7_IT extends Mockito{
 	static HttpServletRequest request;
 	static HttpServletResponse response;
 
+	private Method method = null;
 	private ControllerServlet controllerServlet;
 
   @Before
   public void setUp() throws Exception {
-    controllerServlet = PowerMockito.spy(new ControllerServlet());
-
-		request = mock(HttpServletRequest.class);
-		response = mock(HttpServletResponse.class);
 		try {
-			when(request.getPathInfo()).thenReturn("/update");
-			//PowerMockito.doNothing().when(controllerServlet, "updateBook", request, response);
-			when(request.getParameter("id")).thenReturn(tempID);
-		} catch (MethodNotFoundException e) {}
-		try {
-		 controllerServlet.doGet(request, response);
+			method = Whitebox.getMethod(ControllerServlet.class,
+								"updateBook", HttpServletRequest.class, HttpServletResponse.class);
 		} catch (Exception e) {}
+
+		if (method != null) {
+	    controllerServlet = PowerMockito.spy(new ControllerServlet());
+
+			request = mock(HttpServletRequest.class);
+			response = mock(HttpServletResponse.class);
+			try {
+				when(request.getPathInfo()).thenReturn("/update");
+				//PowerMockito.doNothing().when(controllerServlet, "updateBook", request, response);
+				when(request.getParameter("id")).thenReturn(tempID);
+			} catch (MethodNotFoundException e) {}
+			try {
+			 controllerServlet.doGet(request, response);
+			} catch (Exception e) {}
+		}
   }
 
 		// Verify updateBook() exists in ControllerServlet
 		@Test
 		public void _task6() throws Exception {
-			Method method = null;
-			try {
-				method = Whitebox.getMethod(ControllerServlet.class,
-									"updateBook", HttpServletRequest.class, HttpServletResponse.class);
-			} catch (Exception e) {}
-
 			String errorMsg = "private void updateBook() does not exist in ControllerServlet";
 			assertNotNull(errorMsg, method);
 		}
 
-
     @Test
     public void _task7() throws Exception {
-			 // try {
-				// 	PowerMockito.verifyPrivate(controllerServlet)
-				// 							.invoke("updateBook", request, response);
-				// 	called_updateBook = true;
-			 // } catch (Throwable e) {}
+			String errorMsg = "private void updateBook() does not exist in ControllerServlet";
+			assertNotNull(errorMsg, method);
 
-			String errorMsg = "After action \"" + "/update" +
+		  try {
+				PowerMockito.verifyPrivate(controllerServlet)
+										.invoke("updateBook", request, response);
+				called_updateBook = true;
+		  } catch (Throwable e) {}
+
+			errorMsg = "After action \"" + "/update" +
 												"\", did not call updateBook().";
 			assertTrue(errorMsg, called_updateBook);
     }

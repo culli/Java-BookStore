@@ -79,7 +79,8 @@ public class Module1_Task7_and_8_IT extends Mockito{
 			 for (Invocation anInvocation : invocations) {
 			   methodsCalled.add(anInvocation.getMethod().getName());
 			 }
-			 assertTrue(methodsCalled.contains("deleteBook"));
+			 errorMsg = "The ControllerServlet deleteBook() method was not called.";
+			 assertTrue(errorMsg, methodsCalled.contains("deleteBook"));
 
 			 try {
           verify(request, atLeast(1)).getParameter("id");

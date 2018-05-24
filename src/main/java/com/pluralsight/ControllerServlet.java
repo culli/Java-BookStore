@@ -62,9 +62,9 @@ public class ControllerServlet extends HttpServlet {
 				// case "/edit":
 				// 	showEditForm(request, response);
         //   break;
-				// case "/delete":
-				// 	deleteBook(request, response);
-        //   break;
+				case "/delete":
+					deleteBook(request, response);
+          break;
 				// case "/update":
 				// 	updateBook(request, response);
         //   break;
@@ -111,12 +111,12 @@ public class ControllerServlet extends HttpServlet {
 	// 	    dispatcher.forward(request, response);
 	// }
 
-	// private void deleteBook(HttpServletRequest request, HttpServletResponse response)
-	// 		throws ServletException, IOException {
-	// 			int id = Integer.parseInt(request.getParameter("id"));
-	// 			bookDAO.deleteBook(id);
-	// 			response.sendRedirect("list");
-	// }
+	private void deleteBook(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+				int id = Integer.parseInt(request.getParameter("id"));
+				bookDAO.deleteBook(id);
+				response.sendRedirect("list");
+	}
 
 	private void insertBook(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, ClassNotFoundException, SQLException {
